@@ -10,7 +10,7 @@ Create a new Project like this:
     
     rails new [projectname] -b https://raw.github.com/rubberandglue/app_builder/master/lib/app_builder.rb
 
-### Gems
+### Installed Gems
 
 * better_errors
 * mysql2
@@ -21,6 +21,8 @@ Create a new Project like this:
 * newrelic
 * devise
 * flowdock deploy-notification
+
+Note: Some Gems still need you to configure and run generators (for example devise).
 
 TODO
 ----

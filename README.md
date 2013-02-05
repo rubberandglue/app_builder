@@ -7,6 +7,7 @@ USAGE
 -----
 
 Create a new Project like this:
+    
     rails new [projectname] -b https://raw.github.com/rubberandglue/app_builder/master/lib/app_builder.rb
 
 ### Gems

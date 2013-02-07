@@ -52,7 +52,7 @@ class AppBuilder < Rails::AppBuilder
     @generator.gem 'airbrake'
     @generator.gem 'newrelic_rpm'
 
-    @generator.gem 'basics', git: 'git://github.com/rubberandglue/basics'
+    @generator.gem 'basics', github: 'rubberandglue/basics'
 
     gem_group :development do
       gem 'better_errors'

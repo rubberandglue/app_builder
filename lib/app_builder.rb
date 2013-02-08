@@ -38,12 +38,6 @@ class AppBuilder < Rails::AppBuilder
       remove_file "public/index.html"
     end
 
-    # git
-    git :init
-    append_file ".gitignore", "config/database.yml"
-    append_file ".gitignore", ".idea"
-    git add: ".", commit: "-m 'initial commit'"
-
     #gems
     @generator.gem 'twitter-bootstrap-rails'
     @generator.gem 'devise'
@@ -69,5 +63,11 @@ class AppBuilder < Rails::AppBuilder
 
     # application.rb
     insert_into_file "config/application.rb", "    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', 'models', '*.{rb,yml}').to_s]\n    config.i18n.default_locale = :de\n", :after => "# The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.\n"
+
+    # git
+    git :init
+    append_file ".gitignore", "config/database.yml"
+    append_file ".gitignore", ".idea"
+    git add: ".", commit: "-m 'initial commit'"
   end
 end

@@ -24,7 +24,7 @@ class AppBuilder < Rails::AppBuilder
         set :app_name, '#{app_name}'
         set :rvm_ruby_string, '1.9.3-p194'
         set :rvm_install_with_sudo, true
-        set :user, 'root'"
+        set :user, 'root'
       DEPLOY
     end
   end

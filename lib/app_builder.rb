@@ -50,6 +50,7 @@ class AppBuilder < Rails::AppBuilder
 
     gem_group :development do
       gem 'better_errors'
+      gem "binding_of_caller"
     end
 
     gem_group :production, :staging do
@@ -67,7 +68,7 @@ class AppBuilder < Rails::AppBuilder
     # git
     git :init
     append_file ".gitignore", "config/database.yml"
-    append_file ".gitignore", ".idea"
+    append_file ".gitignore", "\n.idea"
     git add: ".", commit: "-m 'initial commit'"
   end
 end
